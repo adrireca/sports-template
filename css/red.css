@@ -1,0 +1,61 @@
+#header #reloj:hover{
+    color: #CA3413;
+}
+.first_menu ul li a:hover{
+    color: #CA3413;
+}
+#logotipo{
+    background-color: #CA3413;
+}
+#header_principal .search input[type="text"]{
+    border: 2px solid #CA3413;
+}
+#JqueryMenu li a:hover{
+    color:#CA3413;
+}
+#header .header_titulo h1{
+    color:#CA3413;
+}
+#container .seccion_deporte h2{
+    color: #CA3413;
+}
+#container .seccion_deporte .categoria{
+    border: 1px solid #CA3413;
+}
+#container .categoria:hover h3{
+    color: #CA3413;
+}
+#carouselExampleControls{
+    border: 7px solid #CA3413;
+}
+#posts .button-more{
+    background-color: #CA3413;
+}
+#calculadora{
+    border: 1px solid #CA3413;
+}
+#calculadora h3{
+    background-color: #CA3413;
+}
+#btn-imc .btn{
+    border-color: #CA3413;
+    color: #CA3413;
+}
+#btn-imc .btn:hover{
+    background-color: #CA3413;
+}
+#result span{
+    color: #CA3413;
+}
+.seccion-footer ul li a{
+    color: #CA3413;
+}
+.seccion-footer p{
+    color: #CA3413;
+}
+#subir a{
+    color: #CA3413;
+}
+#art-secciones h2{
+    color: #CA3413;
+}

@@ -1,0 +1,828 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+   }
+   table { border-collapse: collapse; border-spacing: 0; }
+   td, th, caption { font-weight: normal; text-align: left; }
+   img, fieldset { border: 0; }
+   ol { padding-left: 1.4em; list-style: decimal; }
+   ul { padding-left: 1.4em; list-style:square; }
+   q:before, q:after { content:''; }
+/*RESET*/
+
+
+
+
+
+
+/* fuentes */
+@font-face{
+    font-family: 'BebasNeue';
+    src: url("../fonts/BebasNeue.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'WebSymbolsRegular';
+    src: url("../fonts/websymbols-regular-webfont.eot");
+    src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("../fonts/websymbols-regular-webfont.ttf") format("truetype"),
+        url("../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'otomano';
+    src: url("../fonts/OtomanopeeOne-Regular.ttf");
+}
+@font-face{
+    font-family: 'yanone';
+    src: url("../fonts/yanone.ttf");
+}
+
+
+
+
+
+
+
+
+/* estilos generales */
+body{
+    background-image: url("../img/background.png") !important;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+
+
+
+
+
+
+/* temas del sitio web */
+#selector-theme{
+    position: fixed;
+    top: 50%;
+    width: 50px;
+    height: 100px;
+    left: -38px;
+    background: rgba(51,51,51, 0.7);
+}
+#to-green, #to-red, #to-blue{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#to-green{
+    background: url("../img/theme.svg");
+    background-color: #235e3d;
+}
+#to-red{
+    background: url("../img/theme.svg");
+    background-color: #CA3413;
+}
+#to-blue{
+    background: url("../img/theme.svg");
+    background-color: #1f87c4;
+}
+
+
+
+
+
+
+
+
+
+/* cabecera */
+#header{
+    background-color: #212121;
+}
+#header #reloj{
+    background-color: #212121;
+    margin: 10px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;;
+    float: left;
+    color: white;
+}
+.first_menu ul li{
+    float: right;
+    margin: 10px 20px 10px 7px;
+    color: white;
+    font-size: 15px;
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.first_menu ul li:first-child{
+    margin-right: 15px;
+}
+.first_menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+#header_principal{
+    width: 100%;
+    min-height: 55px;
+    margin: 0 auto;
+}
+#logotipo{
+    width: 135px;
+    position: absolute;
+    padding: 5px;
+    transition: all 300ms;
+    overflow: hidden;
+    margin-left: 11%;
+}
+#logotipo:hover{
+    border-radius: 2px;
+    background-color:#ccc;
+}
+#logotipo h3{
+    color: white;
+    display: block;
+    float: right;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'otomano';
+    margin-right: 10px;
+    margin-top: 1px;
+    transition: all 300ms;
+}
+#logotipo:hover h3{
+    animation: fromRight 300ms linear;
+    color: black;
+}
+@keyframes fromRight{
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+#logotipo .simbolo_engranaje{
+    font-family: 'WebSymbolsRegular';
+    color: white;
+    display: block;
+    float: left;
+    font-size: 25px;
+    margin-left: 7px;
+    animation-name: rotate-engranaje;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes rotate-engranaje{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+#logotipo:hover .simbolo_engranaje{
+    animation: fromBellow 500ms linear;
+    color: black;
+}
+@keyframes fromBellow{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#header_principal .search{
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+#header_principal .search form{
+    width: 525px;
+    margin: auto;
+}
+#header_principal .search input[type="text"]{
+    width: 100%;
+    padding: 7px;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+#header_principal .search input[type="submit"]{
+    width: 22px;
+    display: block;
+    margin-top: -26px;
+    margin-left: 500px;
+    padding-bottom: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    color: #555;
+}
+#header_principal .search .icon{
+    font-family: 'WebSymbolsRegular';
+}
+#JqueryMenu li{
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 10px;
+}
+#JqueryMenu > li:first-child {
+    margin-left: 30px;
+}
+#JqueryMenu li a{
+    padding: 0 20px;
+    color: white;
+}
+#JqueryMenu li a:hover{
+    border-bottom: 1px solid white;
+}
+#header .header_img{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    background: url("../img/fd-gen-desk_030320085750.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#header .header_titulo{
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-bottom: 15%;
+}
+#header .titulo_content{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+}
+#header .header_titulo h1{
+    font-size: 40px;
+    font-family: 'otomano';
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 1px black;
+}
+#header .header_img h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+
+
+
+
+/* contenedor principal */
+#container{
+    width: 80%;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    box-shadow: 0 0 5px gray;
+    background: white;
+}
+
+
+
+
+
+
+
+/* sección deporte */
+#container .seccion_deporte{
+    width: 95%;
+    margin: auto;
+    padding-top: 40px;
+}
+#container .seccion_deporte h2{
+    font-size: 27px;
+    text-align: center;
+    font-family: 'BebasNeue';
+    letter-spacing: 3px;
+}
+#container #seccion{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+#container .seccion_deporte .categoria{
+    display: flex;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 10px 1%;
+}
+#container .categoria:hover{
+    box-shadow: 0 0 3px gray;
+    border: 1px solid #ccc;
+}
+#container .categoria a{
+    display: flex;
+    justify-content: inherit;
+    width: 100%;
+    height: 100px;
+    color: black;
+}
+#container .categoria .img_category{
+    flex-basis: 30%;
+}
+#container .categoria .img_category img{
+    width: 100px;
+    height: 100px;
+}
+#container .categoria .img_title{
+    flex-basis: 30%;
+}
+#container .seccion_deporte .categoria h3{
+    width: 100%;
+    font-size: 20px;
+    line-height: 100px;
+    transition: all 300ms;
+}
+.activeCategory{
+    box-shadow: 0 0 3px gray;
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+/* banner bootstrap */
+#carouselExampleControls{
+    width: 93%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 5px gray;
+}
+#carouselExampleControls .carousel-inner{
+    display: flex;
+    width: 100%;
+    max-height: 300px;
+}
+#carouselExampleControls .carousel-inner .carousel-item{
+    width: 100%;
+    height: 100%;
+}
+#carouselExampleControls .carousel-inner .carousel-item img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+/* posts web principal*/
+#posts{
+    width: 86%;
+    margin: auto;
+    margin-top: 70px;
+}
+.post{
+    padding: 10px;
+}
+#posts h2{
+    font-size: 28px;
+    color: #212121;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#posts .date{
+    display: block;
+    margin-top: 5px;
+    color: gray;
+    font-size: 15px;
+}
+#posts p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 22px;
+    font-size: 15px;
+    text-align: justify;
+}
+#posts .button-more{
+    width: 12%;
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    transition: all 300ms;
+}
+#posts .button-more:hover{
+    background: #212121;
+}
+
+
+
+
+
+
+
+/* calculadora */
+#calculadora{
+    width: 65%;
+    min-height: 350px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 5px gray;
+}
+#calculadora h3{
+    display: block;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-family: 'otomano';
+}
+#peso, #altura{
+    width: 40%;
+    margin: 0 auto;
+}
+#btn-imc{
+    width: 100%;
+    text-align: center;
+}
+#btn-imc .btn:hover{
+    color: white;
+}
+#btn-calcular{
+    margin-right: 2%;
+}
+#result{
+    width: 70%;
+    margin: 20px auto;
+    font-size: 17px;
+    font-family: 'otomano';
+    text-align: center;
+}
+#result span{
+    font-size: 15px;
+    font-family: inherit;
+}
+.form-control{
+    min-height: 45px;
+    margin-top: 3px;
+}
+
+
+
+
+
+/* footer */
+#footer {
+    width: 80%;
+    min-height: 455px;
+    margin: auto;
+    margin-top: 40px;
+    background: #212121;
+}
+.seccion-footer{
+    width: 70%;
+    min-height: 340px;
+    margin: auto;
+    margin-top: 40px;
+}
+.seccion-footer h5{
+    display: block;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'bebasNeue';
+    text-align: center;
+    background: url("../img/pxgray.png"), white;
+}
+.seccion-footer ul{
+    text-align: left;
+    margin: 20px;
+}
+.seccion-footer ul li{
+    float: none;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+}
+.seccion-footer ul li a{
+    height: 40px;
+    transition: all 300ms;
+}
+.seccion-footer ul li:hover a{
+    padding-left: 40px;
+}
+.seccion-footer iframe{
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+}
+.seccion-footer p{
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+#subir{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    text-align: end;
+}
+
+
+
+
+
+
+
+
+
+/* secciones */
+#art-secciones{
+    width: 86%;
+    margin: auto;
+    margin-top: 70px;
+}
+.articulo{
+    padding: 10px;
+    font-family: 'yanone';
+}
+#art-secciones h2{
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+#art-secciones h3{
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #212121;
+    text-align: center;
+}
+#art-secciones span{
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: gray;
+    font-size: 17px;
+}
+#art-secciones p{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+
+
+
+
+/* responsive */
+@media(max-width: 1720px){
+    #posts .button-more {
+        width: 80px;
+    }
+}
+@media(max-width: 1465px){
+    #calculadora h3{
+        font-size: 15px;
+    }
+    #peso, #altura {
+        width: 68%;
+    }
+    #btn-imc .btn{
+        font-size: 13px;
+    }
+    #result{
+        font-size: 15px;
+    }
+    .seccion-footer {
+        width: 90%;
+    }
+}
+
+@media(max-width: 1220px){
+    #header_principal .search form {
+        width: 400px;
+    }
+    #header_principal .search input[type="submit"]{
+        margin-left: 375px;
+    }
+    #header .header_titulo h1{
+        font-size: 30px;
+    }
+    #container .seccion_deporte{
+        padding-top: 60px;
+    }
+    #header .header_img h3{
+        font-size: 17px;
+    }
+    #container, #footer{
+        width: 90%;
+    }
+}
+
+@media(max-width: 1000px){
+    #header_principal .search form {
+        width: 335px;
+    }
+    #header_principal .search input[type="submit"]{
+        margin-left: 310px;
+    }
+    #header .header_titulo h1{
+        font-size: 25px;
+    }
+    #header .header_titulo .titulo_content .header_description{
+        width: 100% !important;
+    }
+    #header .header_img h3 {
+        font-size: 14px;
+    }
+    #container, #footer {
+        width: 100%;
+    }
+    #selector-theme{
+        z-index: 2;
+    }
+}
+
+@media(max-width: 870px){
+    #logotipo{
+        margin-left: 1%;
+    }
+    #JqueryMenu li {
+        font-size: 15px;
+    }
+    #header .header_titulo h1 {
+        font-size: 20px;
+    }
+    #container .categoria .img_category img {
+        width: 80px;
+        height: 90px;
+    }
+    #container .seccion_deporte .categoria h3{
+        font-size: 16px;
+    }
+    #calculadora {
+        width: 80%;
+    }
+    #posts h2 {
+        font-size: 25px;
+    }
+    #posts p {
+        font-size: 12px;
+    }
+    .seccion-footer h5{
+        font-size: 30px;
+    }
+    .seccion-footer ul li{
+        font-size: 13px;
+    }
+    .seccion-footer p{
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 750px){
+    #logotipo{
+        display: none;
+    }
+    #header_principal .search, #header_principal .search form, #header .titulo_content{
+        width: 100%;
+    }
+    #header_principal .search input[type="submit"] {
+        margin-left: 95%;
+    }
+    #header .header_titulo{
+        width: 100% !important;
+        margin-left: 0;
+    }
+    #header .header_titulo .titulo_content .header_description {
+        width: 80% !important;
+    }
+    #container .seccion_deporte, #carouselExampleControls, #container #div_posts, #container #div_calculadora {
+        width: 100%;
+    }
+    #container #seccion {
+        display: block;
+    }
+    #container .seccion_deporte .categoria{
+        margin: 0;
+    }
+    #container .seccion_deporte .categoria h3 {
+        text-transform: uppercase;
+    }
+    #calculadora {
+        width: 50%;
+        margin-top: 40px;
+    }
+    #footer #donde-estamos, #footer #autor, #footer #menu_footer{
+        width: 100%;
+    }
+    #footer .seccion-footer{
+        min-height: 130px;
+    }
+    #header #reloj {
+        float: none;
+        margin: 0 0 0 10px;
+        padding-top: 5px;
+    }
+    .seccion-footer {
+        width: 100%;
+    }
+}
+
+@media(max-width: 650px){
+    #header #reloj{
+        display: none;
+    }
+    #header .first_menu{
+        display: flex;
+    }
+    #header .first_menu ul li{
+        margin: 0px 0 5px 10px;
+    }
+    #JqueryMenu li {
+        font-size: 12px;
+        line-height: 25px;
+    }
+    #JqueryMenu > li:first-child {
+        margin-left: 0;
+    }
+    #header .header_titulo .titulo_content .header_description {
+        width: 100% !important;
+        opacity: 0;
+    }
+    #header .header_titulo {
+        margin-bottom: 0%;
+    }
+    #header .header_titulo h1 {
+        font-size: 16px;
+    }
+    #header .titulo_content {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+    #calculadora {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: 450px){
+    #header .first_menu {
+        display: none;
+    }
+    #header_principal .search input[type="submit"] {
+        margin-left: 93%;
+    }
+    #JqueryMenu > li:first-child {
+        display: none;
+    }
+    #header .header_titulo h1 {
+        font-size: 13px;
+        margin-right: 38%;
+    }
+    #header .header_titulo > div > div{
+        margin-bottom: 0 !important;
+    }
+    #header .titulo_content {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width: 330px){
+    #JqueryMenu li {
+        font-size: 10px;
+    }
+}

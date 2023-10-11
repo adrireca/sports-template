@@ -1,0 +1,61 @@
+#header #reloj:hover{
+    color: #37bcf9;
+}
+.first_menu ul li a:hover{
+    color: #37bcf9;
+}
+#logotipo{
+    background-color: #37bcf9;
+}
+#header_principal .search input[type="text"]{
+    border: 2px solid #37bcf9;
+}
+#JqueryMenu li a:hover{
+    color:#37bcf9;
+}
+#header .header_titulo h1{
+    color:#37bcf9;
+}
+#container .seccion_deporte h2{
+    color: #37bcf9;
+}
+#container .seccion_deporte .categoria{
+    border: 1px solid #37bcf9;
+}
+#container .categoria:hover h3{
+    color: #37bcf9;
+}
+#carouselExampleControls{
+    border: 7px solid #37bcf9;
+}
+#posts .button-more{
+    background-color: #37bcf9;
+}
+#calculadora{
+    border: 1px solid #37bcf9;
+}
+#calculadora h3{
+    background-color: #37bcf9;
+}
+#btn-imc .btn{
+    border-color: #37bcf9;
+    color: #37bcf9;
+}
+#btn-imc .btn:hover{
+    background-color: #37bcf9;
+}
+#result span{
+    color: #37bcf9;
+}
+.seccion-footer ul li a{
+    color: #37bcf9;
+}
+.seccion-footer p{
+    color: #37bcf9;
+}
+#subir a{
+    color: #37bcf9;
+}
+#art-secciones h2{
+    color: #37bcf9;
+}
